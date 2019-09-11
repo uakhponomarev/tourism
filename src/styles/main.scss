@@ -3,6 +3,7 @@
 @import 'service/fonts';
 @import 'service/icons';
 @import 'mixins/responsible';
+@import 'header_top';
 
 
 
@@ -19,7 +20,7 @@ body {
 .wrapper {
     position: relative;
     max-width: 100%;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .container {
@@ -28,4 +29,8 @@ body {
     padding: 0 15px;
 }
 
-
+.header-wrap {
+    padding: 7px 0 0 0;
+    background-image: url('../img/bg_header.jpg');
+    background-size: cover;
+}
