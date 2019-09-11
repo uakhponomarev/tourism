@@ -1,0 +1,31 @@
+@import 'service/reset';
+@import 'service/vars';
+@import 'service/fonts';
+@import 'service/icons';
+@import 'mixins/responsible';
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    font-size: 16px;
+    @extend %ff-firasans-regular;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+

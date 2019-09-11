@@ -1,0 +1,4 @@
+remote name: tour
+branch name: tour
+git remote add tour https://github.com/uakhponomarev/tourism.git
+git push -u tour tour

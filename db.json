@@ -1,0 +1,146 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam asperiores culpa cupiditate dignissimos eaque, facere inventore magnam, perspiciatis quas reiciendis sapiente vel voluptatum? Cum error eum molestiae perspiciatis ratione."
+    },
+    {
+      "id": 2,
+      "title": "Post2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam asperiores culpa cupiditate dignissimos eaque, facere inventore magnam, perspiciatis quas reiciendis sapiente vel voluptatum? Cum error eum molestiae perspiciatis ratione."
+    },
+    {
+      "id": 3,
+      "title": "Post3",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam asperiores culpa cupiditate dignissimos eaque, facere inventore magnam, perspiciatis quas reiciendis sapiente vel voluptatum? Cum error eum molestiae perspiciatis ratione."
+    }
+  ],
+  "images": [
+    {
+      "id": "eX53Z5x",
+      "type": "illustration",
+      "url": "https://i.imgur.com/eX53Z5x.jpg"
+    },
+    {
+      "id": "56qEjye",
+      "type": "presentation",
+      "url": "https://i.imgur.com/56qEjye.jpg"
+    },
+    {
+      "id": "8ohO23N",
+      "type": "photography",
+      "url": "https://i.imgur.com/8ohO23N.jpg"
+    },
+    {
+      "id": "h8t8OiC",
+      "type": "people",
+      "url": "https://i.imgur.com/h8t8OiC.jpg"
+    },
+    {
+      "id": "6j8rRRu",
+      "type": "joke",
+      "url": "https://i.imgur.com/6j8rRRu.jpg"
+    },
+    {
+      "id": "KMcDoSC",
+      "type": "illustration",
+      "url": "https://i.imgur.com/KMcDoSC.jpg"
+    },
+    {
+      "id": "qYKTaGA",
+      "type": "illustration",
+      "url": "https://i.imgur.com/qYKTaGA.jpg"
+    },
+    {
+      "id": "QqHcVIz",
+      "type": "illustration",
+      "url": "https://i.imgur.com/QqHcVIz.jpg"
+    },
+    {
+      "id": "ptf7l44",
+      "type": "presentation",
+      "url": "https://i.imgur.com/ptf7l44.jpg"
+    },
+    {
+      "id": "nTpf9dZ",
+      "type": "presentation",
+      "url": "https://i.imgur.com/nTpf9dZ.jpg"
+    },
+    {
+      "id": "yo2amKx",
+      "type": "presentation",
+      "url": "https://i.imgur.com/yo2amKx.jpg"
+    },
+    {
+      "id": "Ne9eT5D",
+      "type": "joke",
+      "url": "https://i.imgur.com/Ne9eT5D.jpg"
+    },
+    {
+      "id": "FbTZh2k",
+      "type": "people",
+      "url": "https://i.imgur.com/FbTZh2k.png"
+    },
+    {
+      "id": "3gidV33",
+      "type": "joke",
+      "url": "https://i.imgur.com/3gidV33.jpg"
+    },
+    {
+      "id": "PvesBm2",
+      "type": "people",
+      "url": "https://i.imgur.com/PvesBm2.jpg"
+    },
+    {
+      "id": "VeuyiFE",
+      "type": "people",
+      "url": "https://i.imgur.com/VeuyiFE.jpg"
+    },
+    {
+      "id": "dQ1u1DL",
+      "type": "illustration",
+      "url": "https://i.imgur.com/dQ1u1DL.png"
+    },
+    {
+      "id": "I2pukdS",
+      "type": "photography",
+      "url": "https://i.imgur.com/I2pukdS.jpg"
+    },
+    {
+      "id": "8DOTtfU",
+      "type": "presentation",
+      "url": "https://i.imgur.com/8DOTtfU.jpg"
+    },
+    {
+      "id": "AgP26gs",
+      "type": "presentation",
+      "url": "https://i.imgur.com/AgP26gs.png"
+    },
+    {
+      "id": "jOzXizc",
+      "type": "illustration",
+      "url": "https://i.imgur.com/jOzXizc.png"
+    },
+    {
+      "id": "QF2KsM9",
+      "type": "photography",
+      "url": "https://i.imgur.com/QF2KsM9.jpg"
+    },
+    {
+      "id": "ZPn98yG",
+      "type": "illustration",
+      "url": "https://i.imgur.com/ZPn98yG.jpg"
+    },
+    {
+      "id": "tOI5PMA",
+      "type": "illustration",
+      "url": "https://i.imgur.com/tOI5PMA.jpg"
+    },
+    {
+      "id": "suCgr8P",
+      "type": "photography",
+      "url": "https://i.imgur.com/suCgr8P.png"
+    }
+  ]
+}

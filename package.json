@@ -1,0 +1,30 @@
+{
+  "name": "testbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "path": "^0.12.7",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.1.4",
+    "jquery": "^3.4.1",
+    "regenerator-runtime": "^0.13.3"
+  }
+}
