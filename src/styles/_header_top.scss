@@ -14,10 +14,9 @@
     }
 }
 .header-contacts-navbar-wrap{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+   
+    display: none;
+   
     
 }
 
@@ -32,7 +31,4 @@
     [class*='icon']{
         color: rgba($primary-text-clr,0.8);
     }
-}
-.nav-menu{
-    display: none;
 }

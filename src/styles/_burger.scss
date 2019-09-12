@@ -1,0 +1,32 @@
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: $burger-menu-size;
+    width: $burger-menu-size;
+    align-self: center;
+    cursor: pointer;
+
+    .burger-line,
+    &:before,
+    &:after {
+        width: $burger-line-width;
+        height: $burger-line-height;
+        background-color: $primary-text-clr;
+    }
+
+    .burger-line {
+        align-self: center;
+        margin-bottom:calc(#{$burger-line-height} * 2.5);
+    }
+
+    &:before {
+        content: '';
+        margin-bottom: calc(#{$burger-line-height} * 2.5);
+    }
+
+    &:after {
+        content: '';
+    }
+}
