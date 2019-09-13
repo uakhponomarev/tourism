@@ -1,34 +1,60 @@
-.header-top{
+.header-top-wrap {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 70px;
 }
 
 .header-top .nav-menu {
     background-color: $primary-btn-clr;
+    border-radius: $primary-border-radius;
 
     .nav-items {
+        @extend %ff-arial-bold;
         display: inline-block;
-        &::first-letter{
+        font-size: 18px;
+        padding: 15px 25px;
+
+        &::first-letter {
             text-transform: uppercase;
         }
     }
 }
-.header-contacts-navbar-wrap{
-   
-    display: none;
-   
-    
+
+.header-contacts-phone {
+    a {
+        font-size: 14px;
+
+        span {
+            @extend %ff-firasans-regular;
+        }
+    }
 }
 
-.header-contacts{
+.header-contacts-navbar-wrap {
+    display: none;
+
+    @include rsp-md {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header-contacts {
+    @extend %ff-arial-bold;
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    color: rgba($primary-text-clr,0.8);
-    address{
+    align-items: center;
+    font-family: Arial, serif;
+    color: rgba($primary-text-clr, 0.8);
+    margin-bottom: 15px;
+
+    address {
         display: inline;
     }
-    [class*='icon']{
-        color: rgba($primary-text-clr,0.8);
-    }
+  
+        img {
+            width: 22px;
+        }
+    
+
 }
