@@ -78,6 +78,10 @@
         height: 15px;
         border-radius: 50%;
         background-color: $white;
+        cursor: pointer;
 
+        &:hover {
+            background-color: rgba($primary-btn-clr, 0.5);
+        }
     }
 }
