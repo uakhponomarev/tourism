@@ -1,5 +1,5 @@
 .header-bottom {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 
 .header-bottom-wrapper {
@@ -7,10 +7,13 @@
     font-size: 20px;
     color: $white;
     width: 70.3125%;
-    padding: 60px 100px 40px 0;
+    padding-top: 20px;
     position: relative;
-    left: 0;
+    line-height: 35px;
 
+    @include rsp-md {
+        padding: 60px 100px 40px 0;
+    }
 
     &:before {
         content: '';
@@ -43,6 +46,7 @@
         }
     }
 }
+
 
 // slick-slide
 
@@ -81,7 +85,11 @@
         cursor: pointer;
 
         &:hover {
-            background-color: rgba($primary-btn-clr, 0.5);
+            transform: scale(1.2);
         }
     }
+}
+
+.active {
+    background-color: $primary-btn-clr !important;
 }

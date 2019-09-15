@@ -1,3 +1,22 @@
+.tours-menu {
+    text-align: center;
+}
+
+.tours-menu-item {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-right: 10px;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    .tours-menu-link {
+        @extend %ff-arial-bold;
+        font-size: 14px;
+    }
+}
+
 .tuors-holder>div {
     display: flex;
 }
@@ -6,4 +25,13 @@
     img {
         width: $tour-img-width;
     }
+}
+
+[class*="header-bottom-slide"] {
+    padding: 5px;
+}
+
+// active state for TOURS-MENU
+.picked {
+    color: $primary-btn-clr;
 }

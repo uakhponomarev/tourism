@@ -42,19 +42,29 @@
 .header-contacts {
     @extend %ff-arial-bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     font-family: Arial, serif;
     color: rgba($primary-text-clr, 0.8);
     margin-bottom: 15px;
 
+    .header-contacts-icons {
+        margin-left: 60px;
+    }
+
+    .header-contacts-phone {
+        margin-left: 40px;
+    }
+
     address {
         display: inline;
     }
-  
-        img {
-            width: 22px;
-        }
-    
 
+    a+a {
+        margin-left: 20px;
+    }
+
+    img {
+        width: 22px;
+    }
 }
