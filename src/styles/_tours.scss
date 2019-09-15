@@ -91,18 +91,18 @@
 .triangle-right,
 .triangle-left {
     position: absolute;
-    opacity: 0.5;
-    top: 50%;
+    opacity: 0.8;
+    top: 57%;
 }
 
 .triangle-right {
     @include triangle-right;
-    right: 10px;
+    right: 9%;
 
 }
 
 .triangle-left {
     @include triangle-left;
-    left: 10px;
+    left: 9%;
 
 }
