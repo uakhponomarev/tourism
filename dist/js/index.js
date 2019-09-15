@@ -118,6 +118,8 @@ $containerSliders.slick({
 $('.slick-dots button').text(''); // add event to slick dots
 
 $('.slick-dots').click(function (e) {
+  e.preventDefault();
+
   if ($(e.target).prop("tagName") === 'BUTTON') {
     $('.slick-dots button').removeClass('active');
     $(e.target).addClass('active');
@@ -126,10 +128,36 @@ $('.slick-dots').click(function (e) {
 // add event to tour-menu links
 
 $('.tours-menu').click(function (e) {
+  e.preventDefault();
+
   if ($(e.target).prop("tagName") === 'A') {
     $('.tours-menu a').removeClass('picked');
     $(e.target).addClass('picked');
   }
+}); //tour-holder SLICK SLIDE
+
+$('.tuors-holder').slick({
+  centerMode: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  infinite: true,
+  nextArrow: $('.triangle-right'),
+  prevArrow: $('.triangle-left'),
+  responsive: [{
+    breakpoint: 980,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      infinite: true
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true
+    }
+  }]
 });
 
 /***/ })

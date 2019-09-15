@@ -1,0 +1,17 @@
+@mixin triangle-right {
+    width: $tri-size;
+    height: $tri-size;
+    border-right: $tri-weight solid $primary-btn-clr;
+    border-top: $tri-weight solid $primary-btn-clr;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+@mixin triangle-left {
+    width: $tri-size;
+    height: $tri-size;
+    border-left: $tri-weight solid $primary-btn-clr;
+    border-bottom: $tri-weight solid $primary-btn-clr;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

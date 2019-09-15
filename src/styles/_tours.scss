@@ -1,3 +1,8 @@
+.tours {
+    position: relative;
+    padding: 0 15px;
+}
+
 .tours-menu {
     text-align: center;
 }
@@ -14,24 +19,90 @@
     .tours-menu-link {
         @extend %ff-arial-bold;
         font-size: 14px;
+        transition: color $primary-transition-duration;
     }
 }
 
-.tuors-holder>div {
-    display: flex;
+.tuors-holder {
+    max-width: 92.7083333333%;
+    margin: 0 auto;
+}
+
+.tuors-holder .slick-track>div {
+    padding: 15px;
+    margin: 0 15px;
+    background-color: $bg-tour-clr;
 }
 
 .tour-img {
+    margin-bottom: 15px;
+    text-align: center;
+
     img {
-        width: $tour-img-width;
+        margin: 0 auto;
     }
+
 }
 
-[class*="header-bottom-slide"] {
-    padding: 5px;
+.tour-describes {
+    @extend %ff-arial-regular;
+    font-size: 16px;
+
+    h4 {
+        font-weight: 700;
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            color: $secondary-text-clr;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid rgba($primary-border-clr, 0.1);
+        }
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 5px;
+        padding: 5px 0;
+
+        &:nth-child(3) {
+            @extend %ff-arial-bold;
+            font-size: 18px;
+
+            span {
+                font-size: 10px;
+                vertical-align: text-top;
+                color: rgba($secondary-text-clr, 0.5);
+            }
+        }
+    }
+
 }
+
+
 
 // active state for TOURS-MENU
 .picked {
     color: $primary-btn-clr;
+}
+
+
+.triangle-right,
+.triangle-left {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+}
+
+.triangle-right {
+    @include triangle-right;
+    right: 10px;
+
+}
+
+.triangle-left {
+    @include triangle-left;
+    left: 10px;
+
 }
