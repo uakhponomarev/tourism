@@ -1,7 +1,37 @@
-.advantages{
+.advantages {
     margin-bottom: 40px;
+    background-color: $primary-bg-clr;
 }
-.advantages-wrap{
-    display: flex;
-    
+
+.advantages-wrap {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    margin-right: -15px;
+
+}
+
+.advantages-header {
+    @extend %ff-arial-bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 40px 0;
+}
+
+.advantages-img {
+    max-width: $advantages-img-width;
+    margin-bottom: 20px;
+    padding: 0 15px 15px 0;
+
+    float: left;
+
+    img {
+        width: 100%;
+    }
+}
+
+.advantages-describe {
+    text-indent: 7%;
+    padding-right: 15px;
+    text-align: justify;
 }

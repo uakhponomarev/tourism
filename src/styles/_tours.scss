@@ -1,7 +1,7 @@
 .tours {
     position: relative;
     padding: 0 15px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .tours-menu {
@@ -32,7 +32,7 @@
 .tuors-holder .slick-track>div {
     padding: 15px;
     margin: 0 15px;
-    background-color: $bg-tour-clr;
+    background-color: $primary-bg-clr;
 }
 
 .tour-img {
@@ -117,7 +117,7 @@
 .triangle-left {
     position: absolute;
     opacity: 0.5;
-    top: 57%;
+    top: 50%;
     outline: 0;
 
     &:hover {
