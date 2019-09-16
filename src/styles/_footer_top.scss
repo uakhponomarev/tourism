@@ -1,19 +1,81 @@
 .footer-top {
     background-image: url('../img/bg_footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer-top-header {
     @extend %ff-arial-bold;
     padding: 40px 0;
     font-size: px;
-    text-align: center;    
+    text-align: center;
     color: $white;
 }
 
 .footer-top-form {
-    background-color: $black;
-    opacity: 0.6;
-    padding: 40px 30px;
+    position: relative;
 
-    
+    padding: 40px 30px;
+    color: $white;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: $black;
+        opacity: 0.6;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.footer-top-form-menu {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-top-form-item {
+    @extend %ff-arial-regular;
+    margin-bottom: 25px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:focus-within {
+        font-size: 0;
+    }
+
+    input:not([type="submit"]) {
+        width: 100%;
+        font-size: 18px;
+        outline: 0;
+        color: $primary-text-clr;
+        border: 0;
+        border-bottom: 1px solid $primary-border-clr;
+        background-color: transparent;
+    }
+
+    [type="submit"] {
+        background-color: $primary-btn-clr;
+        width: 100%;
+        padding: 20px 0;
+        border-radius: $primary-border-radius;
+        outline: 0;
+        border: 0;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    span {
+        position: absolute;
+        left: 5%;
+        bottom: 20%;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
 }
