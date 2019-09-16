@@ -1,6 +1,7 @@
 .tours {
     position: relative;
     padding: 0 15px;
+    margin-bottom: 40px;
 }
 
 .tours-menu {
@@ -69,6 +70,8 @@
         &:nth-child(3) {
             @extend %ff-arial-bold;
             font-size: 18px;
+            margin-bottom: 0;
+            padding-bottom: 0;
 
             span {
                 font-size: 10px;
@@ -78,6 +81,28 @@
         }
     }
 
+    .tour-describes-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $primary-btn-clr;
+        outline: 0;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        span {
+            @include triangle-right;
+            width: 8px;
+            height: 8px;
+            border-width: 2px;            
+        }
+    }
 }
 
 
@@ -87,22 +112,25 @@
     color: $primary-btn-clr;
 }
 
-
+//next/prev arrow for tours slider
 .triangle-right,
 .triangle-left {
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.5;
     top: 57%;
+    outline: 0;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .triangle-right {
     @include triangle-right;
     right: 9%;
-
 }
 
 .triangle-left {
     @include triangle-left;
     left: 9%;
-
 }
