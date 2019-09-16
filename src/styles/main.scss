@@ -9,9 +9,8 @@
 @import 'header_bottom';
 @import 'tours';
 @import 'advantages';
-@import 'footer';
-
-
+@import 'footer_top';
+@import 'footer_bottom';
 
 
 * {
@@ -36,8 +35,11 @@ body {
     padding: 0 15px;
 }
 
-.header-wrap {   
+.header-wrap {
     padding: 7px 0 0 0;
-    background-image: url('../img/bg_header.jpg');    
+    background-image: url('../img/bg_header.jpg');
     background-size: cover;
+}
+.footer{
+    padding-bottom: 200px;
 }

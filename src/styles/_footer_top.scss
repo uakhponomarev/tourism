@@ -1,0 +1,19 @@
+.footer-top {
+    background-image: url('../img/bg_footer.jpg');
+}
+
+.footer-top-header {
+    @extend %ff-arial-bold;
+    padding: 40px 0;
+    font-size: px;
+    text-align: center;    
+    color: $white;
+}
+
+.footer-top-form {
+    background-color: $black;
+    opacity: 0.6;
+    padding: 40px 30px;
+
+    
+}
