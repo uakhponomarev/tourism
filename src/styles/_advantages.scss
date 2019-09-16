@@ -5,7 +5,11 @@
 
 .advantages-wrap {
     margin-right: -15px;
-
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 .advantages-header {

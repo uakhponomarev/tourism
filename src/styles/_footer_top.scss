@@ -14,7 +14,6 @@
 
 .footer-top-form {
     position: relative;
-
     padding: 40px 30px;
     color: $white;
 
@@ -77,5 +76,11 @@
         &::first-letter {
             text-transform: uppercase;
         }
+    }
+    @include rsp-md{
+        display: inline-block; 
+        &+li{
+            margin-left: 10px;
+        }       
     }
 }
