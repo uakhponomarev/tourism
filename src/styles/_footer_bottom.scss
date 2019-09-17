@@ -64,24 +64,28 @@
 
 .footer-bottom-contacts {
     font-size: 16px;
-    [class^='icon']{
+
+    [class^='icon'] {
         padding-right: 5px;
     }
+
     address {
         display: inline;
     }
 
-    &>div {
-        margin-bottom: 30px;
+    &>div+div {
+        margin-top: 30px;
     }
-    .footer-bottom-contacts-phone{
-        span+span{
+
+    .footer-bottom-contacts-phone {
+        span+span {
             font-size: 12px;
             color: $third-text-clr;
         }
     }
-    .footer-bottom-contacts-icons{
-        a+a{
+
+    .footer-bottom-contacts-icons {
+        a+a {
             margin-left: 20px;
         }
     }
