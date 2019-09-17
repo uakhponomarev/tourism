@@ -99,7 +99,9 @@ $(document).ready(function () {
   // set active state to header-bottom slide dots
   $('.slick-dots button').eq(0).addClass('active'); // set active state to tour-menu link
 
-  $tourLink.addClass('picked');
+  $tourLink.addClass('picked'); //hide drop menu of FOOTER-TOP
+
+  $('.footer-top-form-dropdown-menu').addClass('scaledown');
 }); // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
 var $slickDotsContainer = $('.slick-dots');
@@ -158,6 +160,22 @@ $('.tuors-holder').slick({
       infinite: true
     }
   }]
+}); // <<<<<<<<<<<<<<< FOOTER_TOP DROP-MENU >>>>>>>>>>>>>>>
+
+var isFooterDropMenuOpened = false;
+$('.footer-top-form-item.dropdown').click(function (e) {
+  if (!isFooterDropMenuOpened && $(e.target).is($('.footer-top-form-item.dropdown'))) {
+    $('.footer-top-form-dropdown-menu').removeClass('scaledown');
+    $('.footer-top-form-dropdown-menu').addClass('scaleup');
+    isFooterDropMenuOpened = true;
+  }
+
+  if (isFooterDropMenuOpened && $(e.target).is($('.footer-top-form-dropdown-item'))) {
+    $('.footer-top-form-item.dropdown input').val($(e.target).text());
+    $('.footer-top-form-dropdown-menu').removeClass('scaleup');
+    $('.footer-top-form-dropdown-menu').addClass('scaledown');
+    isFooterDropMenuOpened = false;
+  }
 });
 
 /***/ })

@@ -1,3 +1,4 @@
+
 // <<<<<<<<<<<<<< SETS after load the document
 
 const $tourLink = $('.tours-menu-link').eq(0);
@@ -6,7 +7,10 @@ $(document).ready(() => {
   $('.slick-dots button').eq(0).addClass('active');
   // set active state to tour-menu link
   $tourLink.addClass('picked');
+  //hide drop menu of FOOTER-TOP
+  $('.footer-top-form-dropdown-menu').addClass('scaledown');
 });
+
 
 // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
@@ -75,3 +79,21 @@ $('.tuors-holder').slick({
     }
   ]
 });
+
+// <<<<<<<<<<<<<<< FOOTER_TOP DROP-MENU >>>>>>>>>>>>>>>
+var isFooterDropMenuOpened = false;
+
+$('.footer-top-form-item.dropdown').click((e) => {
+  if (!isFooterDropMenuOpened && $(e.target).is($('.footer-top-form-item.dropdown'))) {
+    $('.footer-top-form-dropdown-menu').removeClass('scaledown');
+    $('.footer-top-form-dropdown-menu').addClass('scaleup');
+    isFooterDropMenuOpened = true;
+  }
+  if (isFooterDropMenuOpened && $(e.target).is($('.footer-top-form-dropdown-item'))) {
+    $('.footer-top-form-item.dropdown input').val($(e.target).text());
+    $('.footer-top-form-dropdown-menu').removeClass('scaleup');
+    $('.footer-top-form-dropdown-menu').addClass('scaledown');
+    isFooterDropMenuOpened = false;
+  }
+});
+
