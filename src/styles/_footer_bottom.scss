@@ -1,0 +1,88 @@
+.footer-bottom {
+    padding: 30px 0;
+    color: $white;
+    background-color: $bg-footer-bottom-clr;
+}
+
+.footer-bottom-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-bottom-describe {
+    padding-bottom: 30px;
+    border-bottom: $primary-border-height solid $white;
+
+    .footer-bottom-describe-logo {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: $secondary-border-height solid $primary-border-clr;
+    }
+
+    .footer-bottom-describe-content {
+        line-height: 25px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: $secondary-border-height solid $primary-border-clr;
+    }
+
+    .footer-bottom-describe-advertising {
+        color: $third-text-clr;
+        font-size: 13px;
+    }
+}
+
+.footer-bottom-nav,
+.footer-bottom-support,
+.footer-bottom-contacts {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 30px 0;
+    border-bottom: $primary-border-height solid $white;
+
+    [class*='header'] {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    [class*='menu'] {
+        font-size: 20px;
+
+        [class*='item'] {
+            &::first-letter {
+                text-transform: uppercase;
+            }
+
+            &+li {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.footer-bottom-contacts {
+    font-size: 16px;
+    [class^='icon']{
+        padding-right: 5px;
+    }
+    address {
+        display: inline;
+    }
+
+    &>div {
+        margin-bottom: 30px;
+    }
+    .footer-bottom-contacts-phone{
+        span+span{
+            font-size: 12px;
+            color: $third-text-clr;
+        }
+    }
+    .footer-bottom-contacts-icons{
+        a+a{
+            margin-left: 20px;
+        }
+    }
+}

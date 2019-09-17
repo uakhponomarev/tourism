@@ -2,6 +2,7 @@
     background-image: url('../img/bg_footer.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 30px;
 }
 
 .footer-top-header {
@@ -16,7 +17,7 @@
     position: relative;
     padding: 40px 30px;
     color: $white;
-
+   
     &:before {
         content: '';
         position: absolute;

@@ -81,6 +81,7 @@ $('.tuors-holder').slick({
 });
 
 // <<<<<<<<<<<<<<< FOOTER_TOP DROP-MENU >>>>>>>>>>>>>>>
+
 var isFooterDropMenuOpened = false;
 
 $('.footer-top-form-item.dropdown').click((e) => {
