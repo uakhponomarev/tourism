@@ -11,6 +11,28 @@ $(document).ready(() => {
   $('.footer-top-form-dropdown-menu').addClass('scaledown');
 });
 
+// <<<<<<<<<<<<<<< GLOBAL CLICK >>>>>>>>>>>>>>>
+
+var isBurgerOpend = false;
+
+$(document).click((e) => {
+  //burger menu
+  if (isBurgerOpend && !$(e.target).closest($('.header-contacts-navbar-wrap .nav-menu')).length > 0 && !$(e.target).is($('.burger'))) {
+    $('.header-contacts-navbar-wrap').hide(300);
+    $('.burger').show(300);
+    isBurgerOpend = false;
+  }
+});
+
+// <<<<<<<<<<<<<<< BURGER MENU >>>>>>>>>>>>>>>
+
+$('.burger').click(() => {
+  $('.burger').hide();
+  $('.header-contacts-navbar-wrap').show(300);
+  isBurgerOpend = true;
+});
+
+
 
 // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
@@ -97,4 +119,6 @@ $('.footer-top-form-item.dropdown').click((e) => {
     isFooterDropMenuOpened = false;
   }
 });
+
+
 

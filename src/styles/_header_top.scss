@@ -2,37 +2,46 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
+    position: relative;
 }
 
 .header-top .nav-menu {
-    background-color: $primary-btn-clr;
-    border-radius: $primary-border-radius;
+    padding: 10px 20px 20px;
+    width: 150%;
+    background-color: $bg-footer-bottom-clr;
+    color: $primary-text-clr;
 
     .nav-items {
         @extend %ff-arial-bold;
-        display: inline-block;
+        display: block;
         font-size: 18px;
         padding: 15px 25px;
+        margin-top: 20px;
 
         &::first-letter {
             text-transform: uppercase;
         }
-    }
-}
 
-.header-contacts-phone {
-    a {
-        font-size: 14px;
-
-        span {
-            @extend %ff-firasans-regular;
+        @include rsp-md {
+            display: inline-block;
         }
+
+    }
+
+    @include rsp-md {
+        background-color: $primary-btn-clr;
+        border-radius: $primary-border-radius;
     }
 }
 
 .header-contacts-navbar-wrap {
     display: none;
-
+    position: absolute;
+    right: 0 - 15px;
+    top: 0-15px;
+    bottom: 0;
+    z-index: 3;
+    
     @include rsp-md {
         display: flex;
         flex-direction: column;
@@ -41,12 +50,11 @@
 
 .header-contacts {
     @extend %ff-arial-bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: none;
     font-family: Arial, serif;
     color: rgba($primary-text-clr, 0.8);
     margin-bottom: 15px;
+
 
     .header-contacts-icons {
         margin-left: 60px;
@@ -54,7 +62,16 @@
 
     .header-contacts-phone {
         margin-left: 40px;
-        [class^='icon']{
+
+        a {
+            font-size: 14px;
+
+            span {
+                @extend %ff-firasans-regular;
+            }
+        }
+
+        [class^='icon'] {
             font-size: 16px;
         }
     }
@@ -69,5 +86,11 @@
 
     img {
         width: 22px;
+    }
+
+    @include rsp-md {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
 }

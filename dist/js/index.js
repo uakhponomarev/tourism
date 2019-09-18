@@ -102,6 +102,22 @@ $(document).ready(function () {
   $tourLink.addClass('picked'); //hide drop menu of FOOTER-TOP
 
   $('.footer-top-form-dropdown-menu').addClass('scaledown');
+}); // <<<<<<<<<<<<<<< GLOBAL CLICK >>>>>>>>>>>>>>>
+
+var isBurgerOpend = false;
+$(document).click(function (e) {
+  //burger menu
+  if (isBurgerOpend && !$(e.target).closest($('.header-contacts-navbar-wrap .nav-menu')).length > 0 && !$(e.target).is($('.burger'))) {
+    $('.header-contacts-navbar-wrap').hide(300);
+    $('.burger').show(300);
+    isBurgerOpend = false;
+  }
+}); // <<<<<<<<<<<<<<< BURGER MENU >>>>>>>>>>>>>>>
+
+$('.burger').click(function () {
+  $('.burger').hide();
+  $('.header-contacts-navbar-wrap').show(300);
+  isBurgerOpend = true;
 }); // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
 var $slickDotsContainer = $('.slick-dots');
