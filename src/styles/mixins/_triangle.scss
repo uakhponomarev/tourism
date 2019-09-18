@@ -4,14 +4,26 @@
     border-right: $tri-weight solid $tri-clr;
     border-top: $tri-weight solid $tri-clr;
     transform: rotate(45deg);
+    border-radius: 5px;
     cursor: pointer;
 }
 
 @mixin triangle-left {
     width: $tri-size;
-    height: $tri-size;    
+    height: $tri-size;
     border-left: $tri-weight solid $tri-clr;
     border-bottom: $tri-weight solid $tri-clr;
     transform: rotate(45deg);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@mixin triangle-down {
+    width: $tri-down-size;
+    height: $tri-down-size;
+    border-left: $tri-down-weight solid $tri-down-clr;
+    border-bottom: $tri-down-weight solid $tri-down-clr;
+    transform: rotate(-45deg);
+    border-radius: 2px;
     cursor: pointer;
 }

@@ -100,7 +100,8 @@
             @include triangle-right;
             width: 8px;
             height: 8px;
-            border-width: 2px;            
+            border-width: 2px;
+            border-radius: 0;
         }
     }
 }
@@ -127,9 +128,19 @@
 .triangle-right {
     @include triangle-right;
     right: 9%;
+
+    @include rsp-lg {
+        right: 5%;
+    }
+
 }
 
 .triangle-left {
     @include triangle-left;
     left: 9%;
+
+    @include rsp-lg {
+        left: 5%;
+    }
+
 }

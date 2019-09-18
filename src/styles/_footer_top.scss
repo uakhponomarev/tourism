@@ -17,7 +17,7 @@
     position: relative;
     padding: 40px 30px;
     color: $white;
-   
+
     &:before {
         content: '';
         position: absolute;
@@ -84,10 +84,10 @@
 
     &::after {
         content: '';
-        @include triangle-left;
+        @include triangle-down;
         position: absolute;
         right: 5%;
-        border-color: $primary-text-clr;
+        border-color: rgba($primary-text-clr, 0.7);
         transform: rotate(-45deg);
         width: 10px;
         height: 10px;
@@ -115,10 +115,3 @@
     }
 }
 
-.scaledown {
-    transform: scale(0);
-}
-
-.scaleup {
-    transform: scale(1);
-}

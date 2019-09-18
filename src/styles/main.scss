@@ -40,3 +40,12 @@ body {
     background-image: url('../img/bg_header.jpg');
     background-size: cover;
 }
+
+// CLASSES FOR CLICK ANOMATIONS(used footer-top, header-top)
+.scaledown {
+    transform: scale(0);
+}
+
+.scaleup {
+    transform: scale(1);
+}

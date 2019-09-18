@@ -1,6 +1,7 @@
 .header-bottom {
     margin-bottom: 60px;
     padding-bottom: 60px;
+
 }
 
 .header-bottom-wrapper {
@@ -19,7 +20,7 @@
     &:before {
         content: '';
         position: absolute;
-        left: 0;
+        left: -400%;
         top: 0;
         right: 0;
         bottom: 0;
@@ -72,7 +73,7 @@
 }
 
 .slick-dots {
-    margin-top: 30px;
+    margin-top: 30px;    
     position: absolute;
     left: 0;
     top: 100%;

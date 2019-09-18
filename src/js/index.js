@@ -16,11 +16,20 @@ $(document).ready(() => {
 var isBurgerOpend = false;
 
 $(document).click((e) => {
+
   //burger menu
   if (isBurgerOpend && !$(e.target).closest($('.header-contacts-navbar-wrap .nav-menu')).length > 0 && !$(e.target).is($('.burger'))) {
     $('.header-contacts-navbar-wrap').hide(300);
     $('.burger').show(300);
     isBurgerOpend = false;
+  }
+  else if (isHeadTopDropMenuOpened && !$(e.target).closest($('.drop-holder-tours')).length > 0 && $('.drop-holder-tours .header-top-dropmenu').hasClass('scaleup')) {
+    $('.drop-holder-tours .header-top-dropmenu').removeClass('scaleup').addClass('scaledown');
+    isHeadTopDropMenuOpened = false;
+  }
+  else if (isHeadTopDropMenuOpened && !$(e.target).closest($('.drop-holder-servises')).length > 0 && $('.drop-holder-servises .header-top-dropmenu').hasClass('scaleup')) {
+    $('.drop-holder-servises .header-top-dropmenu').removeClass('scaleup').addClass('scaledown');
+    isHeadTopDropMenuOpened = false;
   }
 });
 
@@ -29,11 +38,26 @@ $(document).click((e) => {
 $('.burger').click(() => {
   $('.burger').hide(300);
   $('.header-contacts-navbar-wrap').show(300);
-  //because twice click opened and closed menu
+  //because twice click opens and quick closes the burger menu
   setTimeout(() => isBurgerOpend = true, 1000);
 });
 
+// <<<<<<<<<<<<<<< HEADER_TOP DROP MENU >>>>>>>>>>>>>>>
 
+var isHeadTopDropMenuOpened = false;
+
+$('.nav-menu').click((e) => {
+  if (!isHeadTopDropMenuOpened && $(e.target).closest($('.drop-holder-tours')).length > 0) {
+
+    $('.drop-holder-tours .header-top-dropmenu').removeClass('scaledown').addClass('scaleup');
+    isHeadTopDropMenuOpened = true;
+  }
+  else if (!isHeadTopDropMenuOpened && $(e.target).closest($('.drop-holder-servises')).length > 0) {
+
+    $('.drop-holder-servises .header-top-dropmenu').removeClass('scaledown').addClass('scaleup');
+    isHeadTopDropMenuOpened = true;
+  }
+});
 
 // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
