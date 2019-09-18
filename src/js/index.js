@@ -27,9 +27,10 @@ $(document).click((e) => {
 // <<<<<<<<<<<<<<< BURGER MENU >>>>>>>>>>>>>>>
 
 $('.burger').click(() => {
-  $('.burger').hide();
+  $('.burger').hide(300);
   $('.header-contacts-navbar-wrap').show(300);
-  isBurgerOpend = true;
+  //because twice click opened and closed menu
+  setTimeout(() => isBurgerOpend = true, 1000);
 });
 
 
