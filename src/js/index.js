@@ -78,6 +78,15 @@ $('.slick-dots').click((e) => {
 
 // <<<<<<<<<<<<<<< TOUR_MENU  >>>>>>>>>>>>>>>
 
+//find most popular tours(add to localStorage amount of visits of tours)
+$('.slick-track').click((e) => {
+  if ($(e.target).closest($('.tour-describes-link')).length > 0) {
+    let targetTour = $(e.target).closest(".slick-track > div").attr('class').slice(0, 7).trim();
+    let item = window.localStorage.getItem(targetTour);
+    window.localStorage.setItem(targetTour, ++item);
+  }
+});
+
 // add event to tour-menu links
 $('.tours-menu').click((e) => {
   e.preventDefault();
