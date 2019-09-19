@@ -1,6 +1,5 @@
 .footer-top {
     background-image: url('../img/bg_footer.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 30px;
 }
@@ -33,6 +32,10 @@
 .footer-top-form-menu {
     position: relative;
     z-index: 1;
+
+    @include rsp-md {
+        text-align: center;
+    }
 }
 
 .footer-top-form-item {
@@ -42,6 +45,12 @@
 
     &:last-child {
         margin-bottom: 0;
+        text-align: center;
+
+
+        @include rsp-lg {
+            // width: calc(35% - 10px);
+        }
     }
 
     &:focus-within {
@@ -56,24 +65,47 @@
         border: 0;
         border-bottom: 1px solid $primary-border-clr;
         background-color: transparent;
+
+        @include rsp-md {
+            font-size: 13px;
+        }
+        @include rsp-lg {
+            font-size: 18px;
+        }
     }
 
     [type="submit"] {
         background-color: $primary-btn-clr;
-        width: 100%;
-        padding: 20px 0;
+        padding: 20px;
         border-radius: $primary-border-radius;
         outline: 0;
         border: 0;
         font-size: 16px;
         cursor: pointer;
+
+        @include rsp-md {
+            font-size: 13px;
+        }
+
+        @include rsp-lg {
+            font-size: 18px;
+        }
     }
 
     @include rsp-md {
         display: inline-block;
+        width: calc(25% - 25px);
 
         &+li {
-            margin-left: 10px;
+            margin-left: 25px;
+        }
+    }
+    @include rsp-xl {
+        
+        width: calc(18% - 25px);
+
+        &+li {
+            margin-left: 25px;
         }
     }
 }
@@ -115,4 +147,3 @@
 
     }
 }
-
