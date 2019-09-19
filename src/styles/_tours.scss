@@ -27,12 +27,23 @@
 .tuors-holder {
     max-width: 92.7083333333%;
     margin: 0 auto;
+
 }
 
 .tuors-holder .slick-track>div {
+
     padding: 15px;
     margin: 0 15px;
     background-color: $primary-bg-clr;
+
+    @include rsp-xl {
+        display: flex;
+        flex-direction: row;
+
+        div+div {
+            margin-left: 10px;
+        }
+    }
 }
 
 .tour-img {
@@ -41,8 +52,13 @@
 
     img {
         margin: 0 auto;
+        width: 100%;
     }
 
+    @include rsp-xl {
+        margin-bottom: 0;
+        align-self: center;
+    }
 }
 
 .tour-describes {
