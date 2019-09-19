@@ -5,10 +5,17 @@
 
 .advantages-wrap {
     margin-right: -15px;
-    &:after{
+    padding-bottom: 15px;
+
+    &:after {
         content: '';
         display: block;
         clear: both;
+    }
+
+    @include rsp-md {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -29,10 +36,22 @@
     img {
         width: 100%;
     }
+
+    @include rsp-md {
+        margin-bottom: 0;
+        float: none;
+    }
 }
 
 .advantages-describe {
     text-indent: 7%;
     padding-right: 15px;
     text-align: justify;
+
+    @include rsp-md {
+        width: 537px;
+        height: 184px;
+        margin-left: 70px;
+        overflow-y: scroll;
+    }
 }
