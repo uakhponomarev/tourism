@@ -1,14 +1,10 @@
 
 // <<<<<<<<<<<<<< SETS after load the document
 
-const $tourLink = $('.tours-menu-link').eq(0);
 $(document).ready(() => {
   // set active state to header-bottom slide dots
   $('.slick-dots button').eq(0).addClass('active');
-  // set active state to tour-menu link
-  $tourLink.addClass('picked');
-  //hide drop menu of FOOTER-TOP
-  $('.footer-top-form-dropdown-menu').addClass('scaledown');
+
 });
 
 // <<<<<<<<<<<<<<< GLOBAL CLICK >>>>>>>>>>>>>>>
@@ -48,12 +44,10 @@ var isHeadTopDropMenuOpened = false;
 
 $('.nav-menu').click((e) => {
   if (!isHeadTopDropMenuOpened && $(e.target).closest($('.drop-holder-tours')).length > 0) {
-
     $('.drop-holder-tours .header-top-dropmenu').removeClass('scaledown').addClass('scaleup');
     isHeadTopDropMenuOpened = true;
   }
   else if (!isHeadTopDropMenuOpened && $(e.target).closest($('.drop-holder-servises')).length > 0) {
-
     $('.drop-holder-servises .header-top-dropmenu').removeClass('scaledown').addClass('scaleup');
     isHeadTopDropMenuOpened = true;
   }
@@ -61,13 +55,8 @@ $('.nav-menu').click((e) => {
 
 // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
 
-const $slickDotsContainer = $('.slick-dots');
-const $slickDotsButton = $('.slick-dots button');
-// const $slickButton = $('.slick-dots button');
-const $containerSliders = $('.slider-holder');
-
 // acitvate slick slide
-$containerSliders.slick({
+$('.slider-holder').slick({
   dots: true,
   arrows: false,
   infinite: true,

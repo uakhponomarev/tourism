@@ -103,6 +103,7 @@
     width: 100%;
     color: $black;
     padding: 10px;
+    transform: scale(0);
     transition: transform $primary-transition-duration;
 
     li {

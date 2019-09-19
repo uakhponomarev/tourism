@@ -1,5 +1,5 @@
 USE:
-HTML, CSS, JS, SCSS, jQuery
+HTML, SCSS, jQuery,Slick
 
 
 For start server:

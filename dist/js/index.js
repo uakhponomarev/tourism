@@ -1185,14 +1185,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_0__);
 
 // <<<<<<<<<<<<<< SETS after load the document
-var $tourLink = $('.tours-menu-link').eq(0);
 $(document).ready(function () {
   // set active state to header-bottom slide dots
-  $('.slick-dots button').eq(0).addClass('active'); // set active state to tour-menu link
-
-  $tourLink.addClass('picked'); //hide drop menu of FOOTER-TOP
-
-  $('.footer-top-form-dropdown-menu').addClass('scaledown');
+  $('.slick-dots button').eq(0).addClass('active');
 }); // <<<<<<<<<<<<<<< GLOBAL CLICK >>>>>>>>>>>>>>>
 
 var isBurgerOpend = false;
@@ -1230,13 +1225,9 @@ $('.nav-menu').click(function (e) {
     isHeadTopDropMenuOpened = true;
   }
 }); // <<<<<<<<<<<<<<< HEADER_BOTTOM SLICK SLIDE >>>>>>>>>>>>>>>
+// acitvate slick slide
 
-var $slickDotsContainer = $('.slick-dots');
-var $slickDotsButton = $('.slick-dots button'); // const $slickButton = $('.slick-dots button');
-
-var $containerSliders = $('.slider-holder'); // acitvate slick slide
-
-$containerSliders.slick({
+$('.slider-holder').slick({
   dots: true,
   arrows: false,
   infinite: true,

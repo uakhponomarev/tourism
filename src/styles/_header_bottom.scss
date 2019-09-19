@@ -2,6 +2,9 @@
     margin-bottom: 60px;
     padding-bottom: 60px;
 
+    @include rsp-lg {
+        padding-bottom: 120px;
+    }
 }
 
 .header-bottom-wrapper {
@@ -51,7 +54,6 @@
 
 
 // slick-slide
-
 [class*='header-bottom-slide'] {
     position: relative;
     z-index: 1;
@@ -68,12 +70,8 @@
 
 }
 
-[class*="header-bottom-slide"] {
-    padding: 5px;
-}
-
 .slick-dots {
-    margin-top: 30px;    
+    margin-top: 30px;
     position: absolute;
     left: 0;
     top: 100%;
@@ -101,6 +99,10 @@
 
     @include rsp-md {
         top: 110%;
+    }
+
+    @include rsp-lg {
+        top: 170%;
     }
 }
 

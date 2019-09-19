@@ -3,6 +3,9 @@
     justify-content: space-between;
     margin-bottom: 70px;
     position: relative;
+    @include rsp-lg{
+        margin-bottom: 200px;
+    }
 }
 
 .header-top .nav-menu {
