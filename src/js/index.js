@@ -12,7 +12,6 @@ $(document).ready(() => {
 var isBurgerOpend = false;
 
 $(document).click((e) => {
-
   //burger menu
   if (isBurgerOpend && !$(e.target).closest($('.header-contacts-navbar-wrap .nav-menu')).length > 0 && !$(e.target).is($('.burger'))) {
     $('.header-contacts-navbar-wrap').hide(300);
@@ -26,6 +25,12 @@ $(document).click((e) => {
   else if (isHeadTopDropMenuOpened && !$(e.target).closest($('.drop-holder-servises')).length > 0 && $('.drop-holder-servises .header-top-dropmenu').hasClass('scaleup')) {
     $('.drop-holder-servises .header-top-dropmenu').removeClass('scaleup').addClass('scaledown');
     isHeadTopDropMenuOpened = false;
+  }
+
+  else if ($(e.target).closest($('.tour-describes-link')).length > 0) {
+    let targetTour = $(e.target).closest(".slick-track > div").attr('class').slice(0, 7).trim();
+    let item = window.localStorage.getItem(targetTour);
+    window.localStorage.setItem(targetTour, ++item);
   }
 });
 
@@ -79,13 +84,15 @@ $('.slick-dots').click((e) => {
 // <<<<<<<<<<<<<<< TOUR_MENU  >>>>>>>>>>>>>>>
 
 //find most popular tours(add to localStorage amount of visits of tours)
-$('.slick-track').click((e) => {
-  if ($(e.target).closest($('.tour-describes-link')).length > 0) {
-    let targetTour = $(e.target).closest(".slick-track > div").attr('class').slice(0, 7).trim();
-    let item = window.localStorage.getItem(targetTour);
-    window.localStorage.setItem(targetTour, ++item);
-  }
-});
+// $('.slick-track').click((e) => {
+//   e.preventDefault();
+//   console.log('IN CLICK');
+//   if ($(e.target).closest($('.tour-describes-link')).length > 0) {
+//     let targetTour = $(e.target).closest(".slick-track > div").attr('class').slice(0, 7).trim();
+//     let item = window.localStorage.getItem(targetTour);
+//     window.localStorage.setItem(targetTour, ++item);
+//   }
+// });
 
 // add event to tour-menu links
 $('.tours-menu').click((e) => {
@@ -93,8 +100,40 @@ $('.tours-menu').click((e) => {
   if ($(e.target).prop("tagName") === 'A') {
     $('.tours-menu a').removeClass('picked');
     $(e.target).addClass('picked');
+    if ($(e.target).hasClass('popular')) {
+
+    }
   }
 });
+
+//find array of class names of most popular tours (from the most popular)
+function getArrayOfPopTours() {
+  let array = [];
+  for (let i = 0; i < window.localStorage.length; i++) {
+    let key = window.localStorage.key(i);
+    let value = window.localStorage.getItem(key);
+    array.push(key + " " + value);
+  }
+  array.sort((el, el2) => {
+    return parseInt(el2.split(' ')[1]) - parseInt(el.split(' ')[1]);
+  });
+  return array.map((el) => el.split(' ')[0]);
+}
+
+//show hided tours from the most popular tour
+function showPopular(array) {
+  console.log(array);
+  
+  console.log($('.slick-track'));
+  array.forEach(el => {
+    // $('.slick-track').append($("." + el));
+    console.log($("." + el));
+    // jQuery("." + el).detach().appendTo('.slick-track')
+    // $("." + el).appendTo($('.slick-track'));
+  });
+
+}
+showPopular(getArrayOfPopTours());
 
 //tour-holder SLICK SLIDE
 
