@@ -46,6 +46,9 @@
     .footer-bottom-describe-advertising {
         color: $third-text-clr;
         font-size: 13px;
+        img{
+            height: 15px;
+        }
     }
 
     @include rsp-sm {
